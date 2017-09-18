@@ -9,6 +9,12 @@ public class UserInput
     public BigDecimal firstNumber;
     private BigDecimal secondNumber;
     private String operator;
+    private boolean exit;
+
+    public boolean exit()
+    {
+        return exit;
+    }
 
     public BigDecimal getFirstNumber()
     {
@@ -32,9 +38,16 @@ public class UserInput
 
         String input[] = scanner.nextLine().split(" ");
 
-        firstNumber = new BigDecimal(input[0]);
-        operator = input[1];
-        secondNumber = new BigDecimal(input[2]);
+        if (input[0].equalsIgnoreCase("exit"))
+        {
+            exit = true;
+        } else
+        {
+            firstNumber = new BigDecimal(input[0]);
+            operator = input[1];
+            secondNumber = new BigDecimal(input[2]);
+        }
+
     }
 
 }
