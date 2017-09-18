@@ -23,11 +23,20 @@ public class Calculator
                 result = firstNumber.add(secondNumber);
                 break;
             case "-":
+            case "minus":
                 System.out.println("Subtracting " + secondNumber + " from " + firstNumber);
-                //TODO Code the subtract
+                result = firstNumber.subtract(secondNumber);
                 break;
-            //TODO CODE multiply
-            //TODO CODE divide
+            case "*":
+            case "times":
+                System.out.println("Multiplying " + secondNumber + " from " + firstNumber);
+                result = firstNumber.multiply(secondNumber);
+                break;
+            case "/":
+            case "divide":
+                System.out.println("Dividing " + secondNumber + " from " + firstNumber);
+                result = firstNumber.divide(secondNumber);
+                break;
 
             default:
                 System.out.println("You are confusing me");
